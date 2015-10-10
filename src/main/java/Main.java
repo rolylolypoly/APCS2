@@ -8,9 +8,7 @@ import java.util.Scanner;
  */
 public class Main {
     static Scanner keyboard = new Scanner(System.in);
-    public static void main(String[] args)  {
-        componematizer();
-    }
+
     public static void fahrenheitToCelsius() {
         System.out.println("Fahrenheit : ");
 
@@ -46,11 +44,40 @@ public class Main {
 
     }
     public static void componematizer() {
-        System.out.println("Radius: ");
-        double radius = keyboard.nextDouble();
+        System.out.println("Magnitude: ");
+        double magnitude = keyboard.nextDouble();
         System.out.println("Angle in degrees: ");
         double theta = keyboard.nextDouble();
-        System.out.println("X:" + (radius * Math.cos(Math.toRadians(theta))));
-        System.out.println("Y:" + (radius * Math.sin(Math.toRadians(theta))));
+        System.out.println("X:" + magnitude * Math.cos(Math.toRadians(theta)));
+        System.out.println("Y:" + magnitude * Math.sin(Math.toRadians(theta)));
+    }
+
+    /**
+     * @param grade char
+     * @return point double
+     */
+    public static double gradeToPoint(char grade) {
+
+        double point = 0.0;
+        switch (grade) {
+            case 'A' : point = 4.0;
+                break;
+            case 'B' : point = 3.0;
+                break;
+            case 'C' : point = 2.0;
+                break;
+            case 'D' : point = 1.0;
+                break;
+            case 'F' : point = 0.0;
+                break;
+        }
+        return point;
+    }
+    public static void gpaCalc2() {
+        System.out.println(gradeToPoint('A'));
+    }
+
+    public static void main(String[] args) {
+        gpaCalc2();
     }
 }
