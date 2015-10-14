@@ -17,8 +17,8 @@ public class Easter {
         int k = c % 4;
         int r = ( 32 + 2 * e + 2 * i - h - k) % 7;
         int m = (a + 11 * h + 22 * r) / 451;
-        int n = (h +r - 7 * m + 144) / 31;
-        int p = (h +r - 7 * m + 144) % 31;
+        int n = (h +r - 7 * m + 114) / 31;
+        int p = (h +r - 7 * m + 114) % 31;
         int month = n;
         int day = p + 1;
 
