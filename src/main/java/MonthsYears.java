@@ -10,7 +10,7 @@ public class MonthsYears {
         int input = scanner.nextInt();
         int year = input / 12;
         int month = input % 12;
-        System.out.println(year);
-        System.out.println(month);
+        System.out.println(year + " years");
+        System.out.println(month + " months");
     }
 }

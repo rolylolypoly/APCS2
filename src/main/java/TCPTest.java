@@ -14,7 +14,7 @@ import java.net.Socket;
 public class TCPTest {
 
     public  static void server(int port) throws IOException{
-        port = 6;
+        port = 6666;
         try (
                 ServerSocket serverSocket = new ServerSocket(port);
                 Socket clientSocket = serverSocket.accept();
@@ -22,7 +22,6 @@ public class TCPTest {
                         new PrintWriter(clientSocket.getOutputStream(), true);
                 BufferedReader in = new BufferedReader(
                         new InputStreamReader(clientSocket.getInputStream()))
-                
         ) {
 
             String inputLine, outputLine;

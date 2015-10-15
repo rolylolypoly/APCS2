@@ -1,4 +1,3 @@
-import java.io.IOException;
 
 /**
  * Author: Will Dang
@@ -7,9 +6,8 @@ import java.io.IOException;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException{
-        System.out.println("Enter number of months: ");
-        MonthsYears MonthYears = new MonthsYears();
-        MonthsYears.Convert();
+    public static void main(String[] args) throws Exception {
+        CasesarCipher CasesarCipher = new CasesarCipher();
+        CasesarCipher.Shift();
     }
 }
