@@ -8,7 +8,8 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) throws IOException{
-        WheelsOnTheBus test = new WheelsOnTheBus();
-        WheelsOnTheBus.Honk();
+        System.out.println("Enter number of months: ");
+        MonthsYears MonthYears = new MonthsYears();
+        MonthsYears.Convert();
     }
 }
