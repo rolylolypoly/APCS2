@@ -1,3 +1,7 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /**
@@ -5,17 +9,43 @@ import java.util.Scanner;
  * 10/15/2015.
  */
 public class CasesarCipher {
-    private static char[] alphabet = new char[26];
-    private static char[] input;
-    public static char[] output;
+    public static void Cipher(){
+        BufferedReader in
+                = new BufferedReader(new InputStreamReader(System.in));
+        try {
 
-    static {
-        for (int i = 97; i <= 122; i++)
-            alphabet[i - 97] = (char) i;
+            String line;
+            while ((line = in.readLine()) != null) {
+                System.out.println(line);
+                Shift(line);
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                in.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
-
-    public static void Shift(int shift) {
-        Scanner input = new Scanner(System.in);
-        System.out.println(alphabet);
+    private static void Shift(String line) {
+        int shift = 13;
+        line.toLowerCase();
+        char[] output = new char[line.length()];
+        int i=0;
+        for (char ch: line.toCharArray()) {
+            if (ch >= 97 && ch <= 122) {
+                output[i] = (char) (((ch - 97 + shift) % 26) +97);
+            }
+            else {
+                output[i] = ch;
+            }
+            i++;
+        }
+        String outString = new String(output);
+        System.out.println(outString);
+        System.out.println(i);
     }
 }

@@ -8,6 +8,6 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         CasesarCipher CasesarCipher = new CasesarCipher();
-        CasesarCipher.Shift();
+        CasesarCipher.Cipher();
     }
 }
