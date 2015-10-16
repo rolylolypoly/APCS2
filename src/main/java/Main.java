@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 /**
  * Author: Will Dang
@@ -7,7 +8,8 @@
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        CasesarCipher CasesarCipher = new CasesarCipher();
-        CasesarCipher.Cipher();
+        Scanner in = new Scanner(System.in);
+        System.out.print("n = ");
+        CasesarCipher.Cipher(in.nextInt());
     }
 }

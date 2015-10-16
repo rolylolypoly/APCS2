@@ -1,6 +1,5 @@
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 
 /**
@@ -8,7 +7,7 @@ import java.io.InputStreamReader;
  * 10/15/2015.
  */
 public class CasesarCipher {
-    public static void Cipher(){
+    public static void Cipher(int shift){
         BufferedReader in
                 = new BufferedReader(new InputStreamReader(System.in));
         try {
@@ -16,7 +15,7 @@ public class CasesarCipher {
             String line;
             while ((line = in.readLine()) != null) {
                 System.out.println(line);
-                Shift(line);
+                Shift(line, shift);
             }
 
         } catch (IOException e) {
@@ -29,9 +28,8 @@ public class CasesarCipher {
             }
         }
     }
-    private static void Shift(String line) {
-        int shift = 13;
-        line.toLowerCase();
+    private static void Shift(String line, int shift) {
+        line = line.toLowerCase();
         char[] output = new char[line.length()];
         int i=0;
         for (char ch: line.toCharArray()) {
@@ -45,6 +43,6 @@ public class CasesarCipher {
         }
         String outString = new String(output);
         System.out.println(outString);
-        System.out.println(i);
+        System.out.println("n = " + shift);
     }
 }
