@@ -5,22 +5,13 @@ import java.util.Scanner;
  * 10/15/2015.
  */
 public class CasesarCipher {
-    public static void Cipher(int shift) {
-        Scanner in = new Scanner(System.in);
-        String line = in.nextLine();
-        Shift(line, shift);
-    }
 
-    private static void Shift(String line, int shift) {
+    public static void Shift(String line, int shift) {
         line = line.toLowerCase();
         char[] output = new char[line.length()];
         int i = 0;
         for (char ch : line.toCharArray()) {
-            if (ch >= 97 && ch <= 122) {
-                output[i] = (char) (((ch - 97 + shift) % 26) + 97);
-            } else {
-                output[i] = ch;
-            }
+            output[i] = ch >= 97 && ch <= 122 ? (char) (((ch - 97 + shift) % 26) + 97) : ch;
             i++;
         }
         String outString = new String(output);
