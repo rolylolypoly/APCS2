@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 /**
  * Author: Will Dang
  * 10/15/2015.
