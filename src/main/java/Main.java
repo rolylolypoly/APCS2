@@ -10,6 +10,6 @@ public class Main {
     public static void main(String[] args) throws Exception {
         Scanner in = new Scanner(System.in);
         System.out.println("Change: ");
-        Coins.yes(in.nextInt());
+        Coins.yes(in.nextInt(), in.nextInt());
     }
 }
