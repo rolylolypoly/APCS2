@@ -21,43 +21,43 @@ public class PostOffice {
         double girth;
         double lengthgirth;
         if (dim1 > dim2 & dim2 > dim3) {
-            girth = dim1 * dim2;
+            girth = (2 * dim1) + (2 * dim2);
             lengthgirth = dim1 + girth;
         }
         else if (dim2 > dim1 & dim1 > dim3) {
-            girth = dim2 * dim1;
+            girth = (2 * dim2) + (2 * dim1);
             lengthgirth = dim2 + girth;
         }
         else if (dim3 > dim1 & dim1 > dim2) {
-            girth = dim3 * dim1;
+            girth = (2 * dim3) + (2 * dim1);
             lengthgirth = dim3 + girth;
         }
         else if (dim1 > dim2 & dim2 == dim3) {
-            girth = dim1 * dim3;
+            girth = (2 * dim1) + (2 * dim3);
             lengthgirth = dim1 + girth;
         }
         else if (dim2 > dim1 & dim1 == dim3) {
-            girth = dim2 * dim3;
+            girth = (2 * dim2) + (2 * dim3);
             lengthgirth = dim2 + girth;
         }
         else if (dim3 > dim1 & dim1 == dim2) {
-            girth = dim3 * dim2;
+            girth = (2 * dim3) + (2 * dim2);
             lengthgirth = dim3 + girth;
         }
         else if (dim1 == dim2 & dim1 > dim3) {
-            girth = dim1 * dim2;
+            girth = (2 * dim1) + (2 * dim2);
             lengthgirth = dim3 + girth;
         }
         else if (dim1 == dim3 & dim1 > dim2) {
-            girth = dim1 * dim3;
+            girth = (2 * dim1) + (2 * dim3);
             lengthgirth = dim3 + girth;
         }
         else if (dim3 == dim2 & dim2 > dim1) {
-            girth = dim3 * dim2;
+            girth = (2 * dim3) + (2 * dim2);
             lengthgirth = dim3 + girth;
         }
         else {
-            girth = dim1 * dim2;
+            girth = (2 * dim1) + (2 * dim2);
             lengthgirth = dim1 + girth;
             out.println("Cube. Or something. CHECK LOGIC.");
         }
