@@ -15,5 +15,8 @@ public class Main {
         double dim3 = in.nextDouble();
         double weight = in.nextDouble();
         PostOffice.Calculate(dim1, dim2, dim3, weight);
+        PostOffice.Calculate(3.0, 2.0, 1.0, 1.0);
+        PostOffice.Calculate(3.0, 2.0, 3.0, 1.0);
+        PostOffice.Calculate(3.0,3.0,3.0,1.0);
     }
 }
