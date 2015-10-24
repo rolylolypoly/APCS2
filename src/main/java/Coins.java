@@ -6,7 +6,7 @@ public class Coins {
     public static void yes(int cents, int dollars) {
 
         int fiddy = dollars / 50;
-        dollars %= 25;
+        dollars %= 50;
         int twenties = dollars / 20;
         dollars %= 20;
         int ten = dollars / 10;
