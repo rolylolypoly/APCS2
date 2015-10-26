@@ -8,8 +8,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        Scanner in = new Scanner(System.in);
-        System.out.println("Dimmies: ");
-        Coins.yes(79,136);
+        TCPTest.server(56666);
+
     }
 }

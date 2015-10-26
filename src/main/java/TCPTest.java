@@ -15,7 +15,6 @@ import java.net.UnknownHostException;
 public class TCPTest {
 
     public  static void server(int port) throws IOException{
-        port = 6666;
         try (
                 ServerSocket serverSocket = new ServerSocket(port);
                 Socket clientSocket = serverSocket.accept();
@@ -45,7 +44,7 @@ public class TCPTest {
     }
 
     private static String processInput(String input) {
-        input = (input == "hello?") ? "yes" : "rawr";
+        input = (input == "hello?") ? "yes" : (input == "hello.") ? "hi" : (input == "hello") ? "hi" : "rawr";
         return input;
     }
 
