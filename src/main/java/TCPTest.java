@@ -27,9 +27,6 @@ public class TCPTest {
             String inputLine, outputLine;
 
             // Initiate conversation with client
-            outputLine = processInput(null);
-            out.println(outputLine);
-
             while ((inputLine = in.readLine()) != null) {
                 outputLine = processInput(inputLine);
                 out.println(outputLine);
