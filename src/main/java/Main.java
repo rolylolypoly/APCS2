@@ -10,7 +10,8 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
-        String string = input.nextLine();
-        VowelCount.count(string);
+        int in1 = input.nextInt();
+        int in2 = input.nextInt();
+        System.out.println(LCM.calculate(in1,in2));
     }
 }
