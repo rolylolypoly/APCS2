@@ -13,6 +13,7 @@ import java.net.UnknownHostException;
 public class TCPTest {
 
     public  static void server(int port) throws IOException{
+        port = 56789;
         try (
                 ServerSocket serverSocket = new ServerSocket(port);
                 Socket clientSocket = serverSocket.accept();
@@ -44,6 +45,7 @@ public class TCPTest {
     }
 
     public static void client(int port) {
+        port = 56789;
         String hostName = "localhost";
         try (
                 Socket kkSocket = new Socket(hostName, port);

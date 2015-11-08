@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -9,9 +8,9 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        Scanner input = new Scanner(System.in);
-        int in1 = input.nextInt();
-        int in2 = input.nextInt();
-        System.out.println(LCM.calculate(in1,in2));
+        for (int i = 1 ; i < 26; i++) {
+            Crypto.rotN("KSVVW BGSJD SVSIS VXBMN YQUUK BNWCU ANMJS", i);
+        }
+
     }
 }
