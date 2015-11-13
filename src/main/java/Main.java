@@ -8,9 +8,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        for (int i = 1 ; i < 26; i++) {
-            Crypto.rotN("KSVVW BGSJD SVSIS VXBMN YQUUK BNWCU ANMJS", i);
-        }
+            Crypto.patternAnalyze("KSVVW BGSJD SVSIS VXBMN YQUUK BNWCU ANMJS");
 
     }
 }
