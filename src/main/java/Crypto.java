@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Author: Will Dang
  * 10/15/2015.
@@ -18,6 +21,13 @@ public class Crypto {
     }
 
     public static void patternAnalyze(String line) {
+        Map alphabet = new HashMap();
+        for (int i = 97; i <= 122; i++) {
+            alphabet.put((char) i, 0);
+        }
+        for (char ch : line.toUpperCase().toCharArray()) {
+            alphabet.containsKey(ch);
+        }
         int a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z;
         a = b = c = d = e = f = g = h = i = j = k = l = m = n = o = p = q = r = s = t = u = v = w = x = y = z = 0;
         for (char ch : line.toUpperCase().toCharArray()) {
