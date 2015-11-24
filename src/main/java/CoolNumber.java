@@ -7,6 +7,7 @@ public class CoolNumber {
         for (int i = 6; i < potato; i++) {
             if(isCoolNumber(i)) count ++;
         }
+        System.out.println(count);
     }
     public static boolean isCoolNumber(int i) {
         if(i % 6 == 1 && i % 5 == 1 && i % 4 == 1) return true;
