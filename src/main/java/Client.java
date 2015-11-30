@@ -1,11 +1,8 @@
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
-import java.net.UnknownHostException;
 
 /**
  * Created by rolypoly on 11/23/15.
@@ -21,6 +18,11 @@ public class Client implements Runnable {
 
     @Override
     public void run() {
+        try {
+            init();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         (new Thread(new UserInput())).start();
         (new Thread(new ServerResponse())).start();
     }
