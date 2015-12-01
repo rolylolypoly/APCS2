@@ -6,6 +6,6 @@
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        FindName.find();
+        System.out.println(StringThings.conCats("rip internet"));
     }
 }
