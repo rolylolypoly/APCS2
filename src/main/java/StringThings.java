@@ -19,4 +19,8 @@ public class StringThings {
     public static String conCats(String one, String two) {
         return (one + two);
     }
+
+    public static String theFuck(String s, int x, int y) {
+        return s.substring(x, y);
+    }
 }
