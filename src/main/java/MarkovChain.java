@@ -26,10 +26,10 @@ public class MarkovChain {
             elements.add(new element(i));
         }
 
-        float i = (float) Math.random();
+        float f = (float) Math.random();
         for (element e: elements) {
             for (element ee: elements) {
-                e.relationships.put(ee, new stats(i, 1 - i));
+                if (!(e.equals(ee))) e.relationships.put(ee, new stats(f, elements.size() - f)); //Well shit. e1 + e2 ... = 1. GENETIC RECURSIVE AL GORE RHYTHMZ.
             }
         }
     }
