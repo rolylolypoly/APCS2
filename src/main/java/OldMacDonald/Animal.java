@@ -5,6 +5,5 @@ package OldMacDonald;
  */
 public interface Animal {
     String getSound();
-
     String getType();
 }
