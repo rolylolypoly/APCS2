@@ -4,7 +4,7 @@ package Matrices;
  * Created by rolypoly on 2/29/16.
  */
 public class Struble {
-    int[][] mat = {
+    private int[][] mat = {
             {1, 2, 3, 4, 5},
             {6, 7, 8, 9, 0},
             {6, 7, 1, 2, 5},
@@ -38,5 +38,34 @@ public class Struble {
         }
 
         return mat;
+    }
+
+    public static int[][] product(int[][] A, int [][] B) {
+        int Ay = A[0].length;
+        int Ax = A.length;
+        int By = B[0].length;
+        int Bx = B.length;
+        int x;
+        int y;
+        if (Ay == Bx){
+            x = Ax;
+            y = By;
+            System.out.println(x + " x " + y);
+        }
+        else {
+            System.err.println("Undefined");
+            return A;
+        }
+        int[][] product = new int[x][y];
+        for (int k = 0; k < Bx; k++) {
+            for (int i = 0; i < By; i++) {
+                for (int l = 0; l < Ax; l++) {
+                    for (int j = 0; j < Ay; j++) {
+                        product[j][l] += (A[j][l] * B[i][k]);
+                    }
+                }
+            }
+        }
+        return product;
     }
 }
